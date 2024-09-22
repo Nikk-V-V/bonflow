@@ -1,25 +1,24 @@
 import MODELS from './MODELS.jsx';
 
-
 export default [
     {
         id: 1,
         name: 'Nikk',
-        model: MODELS.cat
+        model: MODELS.cat,
     },
     {
         id: 2,
         name: 'Alex',
-        model: MODELS.wolf
+        model: MODELS.wolf,
     },
     {
         id: 3,
         name: 'John',
-        model: MODELS.egge
+        model: MODELS.egge,
     },
     {
         id: 4,
         name: 'Jane',
-        model: MODELS.iron_men
-    }
-]
+        model: MODELS.iron_men,
+    },
+];

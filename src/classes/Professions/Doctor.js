@@ -1,5 +1,11 @@
 import Player from '../Player/Player.js';
-import { CarLoan, CreditCard, Mortgage, RetailDebt, SchoolLoan } from '../Liability/Liability.js';
+import {
+    CarLoan,
+    CreditCard,
+    Mortgage,
+    RetailDebt,
+    SchoolLoan,
+} from '../Liability/Liability.js';
 
 export default class Doctor extends Player {
     constructor(playerData) {

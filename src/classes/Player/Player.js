@@ -1,19 +1,23 @@
-import { BankLoan, CarLoan, CreditCard, Mortgage, RetailDebt, SchoolLoan } from '../Liability/Liability.js';
+import {
+    BankLoan,
+    CarLoan,
+    CreditCard,
+    Mortgage,
+    RetailDebt,
+    SchoolLoan,
+} from '../Liability/Liability.js';
 
 export default class Player {
     constructor(userData) {
-        Object.assign(
-            this,
-            {
-                ...userData,
-                currentTurn: {
-                    skipTurns: 0,
-                    circleType: 'RatRace',
-                    diceCount: 1,
-                },
-                currentCellIndex: 0,
-            }
-        );
+        Object.assign(this, {
+            ...userData,
+            currentTurn: {
+                skipTurns: 0,
+                circleType: 'RatRace',
+                diceCount: 1,
+            },
+            currentCellIndex: 0,
+        });
 
         // this.#calculateFinancialStatement();
     }
@@ -95,15 +99,13 @@ export default class Player {
     // }
     //
     move({ moveIndex, ratRaceCells, fastTrackCells, cellsScale }) {
-
-
         this.currentCellIndex = newCellIndex;
         this.movementPath = movementPath;
     }
 
     updatePosition(position, direction) {
         this.position = position;
-        this.direction = direction
+        this.direction = direction;
     }
 
     /**

@@ -1,7 +1,11 @@
 export default function (set, get) {
     return {
-        handleCard: (cell) => {
-            const { processBabyCard, processDoodadCard, processOpportunityCard } = get();
+        handleCard: cell => {
+            const {
+                processBabyCard,
+                processDoodadCard,
+                processOpportunityCard,
+            } = get();
 
             switch (cell.type) {
                 case 'Baby':
@@ -14,45 +18,24 @@ export default function (set, get) {
                     processOpportunityCard();
                     break;
                 case 'Paycheck':
-
                     break;
                 case 'Market':
-
                     break;
                 case 'Downsized':
-
-                        break;
+                    break;
                 case 'Charity':
-                    break
+                    break;
                 default:
                     break;
             }
         },
-        processBabyCard: (cell) => {
-
-        },
-        processDoodadCard: (cell) => {
-
-        },
-        processOpportunityCard: (cell) => {
-
-        },
-        processDreamCard: (cell) => {
-
-        },
-        processPaycheckCard: (cell) => {
-
-        },
-        processMarketCard: (cell) => {
-
-        },
-        processDownsizedCard: (cell) => {
-
-        },
-        processCharityCard: (cell) => {
-
-        },
+        processBabyCard: cell => {},
+        processDoodadCard: cell => {},
+        processOpportunityCard: cell => {},
+        processDreamCard: cell => {},
+        processPaycheckCard: cell => {},
+        processMarketCard: cell => {},
+        processDownsizedCard: cell => {},
+        processCharityCard: cell => {},
     };
-
-
 }

@@ -10,7 +10,7 @@ export default function (get, set) {
                 Array.isArray(parsedState.players)
             ) {
                 set({
-                    players:  parsedState.players,
+                    players: parsedState.players,
                 });
             } else {
                 console.warn('Stored state is invalid or missing users');

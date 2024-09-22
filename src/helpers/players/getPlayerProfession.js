@@ -13,7 +13,6 @@ import {
     createTruckDriver,
 } from './createPlayers.js';
 
-
 let professions = [
     createAirlinePilot,
     createBusinessManager,
@@ -26,7 +25,7 @@ let professions = [
     createPoliceOfficer,
     createNurse,
     createLawyer,
-    createMechanic
+    createMechanic,
 ];
 
 professions = shuffleArray(professions);
@@ -38,7 +37,6 @@ function shuffleArray(array) {
     }
     return array;
 }
-
 
 export default index => {
     return professions[index];

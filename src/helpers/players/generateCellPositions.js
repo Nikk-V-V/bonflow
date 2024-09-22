@@ -1,14 +1,14 @@
 import * as THREE from 'three';
-import Baby from '../../Experience/GameBoard/Cells/Baby.jsx';
-import Risks from '../../Experience/GameBoard/Cells/Risks.jsx';
-import Dream from '../../Experience/GameBoard/Cells/Dream.jsx';
-import Market from '../../Experience/GameBoard/Cells/Market.jsx';
-import Charity from '../../Experience/GameBoard/Cells/Charity.jsx';
-import Doodad from '../../Experience/GameBoard/Cells/Doodad.jsx';
-import Paycheck from '../../Experience/GameBoard/Cells/Paycheck.jsx';
-import Investment from '../../Experience/GameBoard/Cells/Investment.jsx';
-import Downsized from '../../Experience/GameBoard/Cells/Downsized.jsx';
-import Opportunity from '../../Experience/GameBoard/Cells/Opportunity.jsx';
+import Baby from '../../app/Game/Game/components/Experience/GameBoard/Cells/Baby.jsx';
+import Risks from '../../app/Game/Game/components/Experience/GameBoard/Cells/Risks.jsx';
+import Dream from '../../app/Game/Game/components/Experience/GameBoard/Cells/Dream.jsx';
+import Market from '../../app/Game/Game/components/Experience/GameBoard/Cells/Market.jsx';
+import Charity from '../../app/Game/Game/components/Experience/GameBoard/Cells/Charity.jsx';
+import Doodad from '../../app/Game/Game/components/Experience/GameBoard/Cells/Doodad.jsx';
+import Paycheck from '../../app/Game/Game/components/Experience/GameBoard/Cells/Paycheck.jsx';
+import Investment from '../../app/Game/Game/components/Experience/GameBoard/Cells/Investment.jsx';
+import Downsized from '../../app/Game/Game/components/Experience/GameBoard/Cells/Downsized.jsx';
+import Opportunity from '../../app/Game/Game/components/Experience/GameBoard/Cells/Opportunity.jsx';
 
 const cellMap = new Map([
     ['Baby', Baby],

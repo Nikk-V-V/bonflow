@@ -1,4 +1,4 @@
-export default  {
+export default {
     cat: {
         avatar: '/images/avatars/cat.jpg',
         path: '/models/player/cat.glb',
@@ -14,5 +14,5 @@ export default  {
     iron_men: {
         avatar: '/images/avatars/iron_men.png',
         path: '/models/player/iron_men.glb',
-    }
-}
+    },
+};
