@@ -34,7 +34,7 @@ export default () => {
         texture => new THREE.MeshStandardMaterial({ map: texture })
     );
     const cellMaterial = new THREE.MeshStandardMaterial({
-        color: '#000000',
+        color: 'rgb(0,18,9)',
     });
 
     /**
