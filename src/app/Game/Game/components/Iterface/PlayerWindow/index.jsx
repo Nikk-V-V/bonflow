@@ -12,7 +12,7 @@ export default function PlayerWindow({ player, onClose, initialPosition }) {
     const [activeTab, setActiveTab] = useState('Інформація');
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [position, setPosition] = useState(initialPosition);
-    const [size, setSize] = useState({ width: 300, height: 600 });
+    const [size, setSize] = useState({ width: 400, height: 450 });
     const windowRef = useRef(null);
     const isDragging = useRef(false);
     const isResizing = useRef(false);
@@ -20,7 +20,7 @@ export default function PlayerWindow({ player, onClose, initialPosition }) {
     const resizeDirection = useRef('');
 
     const MIN_WIDTH = 300;
-    const MAX_WIDTH = 600;
+    const MAX_WIDTH = 400;
     const MIN_HEIGHT = 370;
     const MAX_HEIGHT = 800;
 
@@ -182,7 +182,8 @@ export default function PlayerWindow({ player, onClose, initialPosition }) {
                         </div>
                     </div>
                     <ScrollArea
-                        className={`h-[${size.height - 120}px] max-h-[70vh] overflow-auto`}
+                        className={`overflow-auto`}
+                        style={{ height: size.height - 120 }}
                     >
                         <div className="p-4">
                             <AnimatePresence mode="wait">
@@ -193,10 +194,7 @@ export default function PlayerWindow({ player, onClose, initialPosition }) {
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.2 }}
                                 >
-                                    <WindowTabs
-                                        activeTab={activeTab}
-                                        player={player}
-                                    />
+                                    <WindowTabs activeTab={activeTab} player={player} />
                                 </motion.div>
                             </AnimatePresence>
                         </div>

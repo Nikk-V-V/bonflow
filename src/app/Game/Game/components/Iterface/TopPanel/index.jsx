@@ -3,12 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import UserIcon from '../UserIcon/index.jsx';
 import PlayerWindow from '../PlayerWindow/index.jsx';
 import useGame from '../../../../../../stores/useGame.jsx';
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from '@components/ui/Tooltip.jsx';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@components/ui/Tooltip.jsx';
 
 export default function TopPanel({}) {
     const { players, turnPlayerIndex } = useGame();
@@ -24,8 +19,8 @@ export default function TopPanel({}) {
                 const newWindow = {
                     ...player,
                     position: {
-                        x: window.innerWidth - (300 + prevWindows.length * 100),
-                        y: 0,
+                        x: (window.innerWidth / 2) - (300 + prevWindows.length * 100),
+                        y: (window.innerHeight / 2) - 400,
                     },
                 };
                 return [...prevWindows, newWindow];
