@@ -2,7 +2,9 @@ import * as THREE from 'three';
 import { calculatePlayerPosition } from '@/helpers/players/playerPositions.js';
 import getPlayerProfession from '@/helpers/players/getPlayerProfession.js';
 import { saveStateToLocalStorage } from '@/helpers/serialize.js';
+import React, { useState } from 'react';
 import PLAYERS_DATA from '@/constants/PLAYERS_DATA.jsx';
+import BonflowModal from '@/components/BonflowModal.jsx';
 
 
 export default function (set, get) {
@@ -69,6 +71,8 @@ export default function (set, get) {
             });
         },
         processMove: () => {
+            const [isModalOpen, setModalOpen] = useState(false);
+            const [currentCardInfo, setCurrentCardInfo] = useState(null);
             const {
                 ratRaceCells,
                 fastTrackCells,
@@ -85,7 +89,18 @@ export default function (set, get) {
 
             const currentCell = cells[cellIndex];
 
-            handleCard(currentCell);
+            setCurrentCardInfo(currentCell);
+            setModalOpen(true);
+
+            const handleCloseModal = () => setModalOpen(false);
+
+            return (
+                <BonflowModal
+                    isOpen={isModalOpen}
+                    onClose={handleCloseModal}
+                    cardInfo={currentCardInfo}
+                />
+            );
             nextTurn();
         },
         nextTurn: () => {
