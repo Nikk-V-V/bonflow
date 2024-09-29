@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
-import useGame from '@stores/useGame.jsx';
-import { alignPlayerYPosition } from '@helpers/players/playerPositions.js';
+import useGame from '@/stores/useGame.jsx';
+import { alignPlayerYPosition } from '@/helpers/players/playerPositions.js';
 
 export default function Player({ player }) {
     const { processMove, updatePlayerPosition } = useGame();

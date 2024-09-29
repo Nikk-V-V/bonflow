@@ -1,4 +1,4 @@
-import { Progress } from '@components/ui/Progress.jsx';
+import { Progress } from '@/components/ui/Progress.jsx';
 
 export default function Assets({ player }) {
     return (

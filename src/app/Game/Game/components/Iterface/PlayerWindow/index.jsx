@@ -3,8 +3,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, X } from 'lucide-react';
 
 import WindowTabs from './WindowTabs/index.jsx';
-import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/Avatar.jsx';
-import { ScrollArea, ScrollBar } from '@components/ui/ScrollArea.jsx';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar.jsx';
+import { ScrollArea, ScrollBar } from '@/components/ui/ScrollArea.jsx';
 
 const tabs = ['Інформація', 'Активи', 'Витрати'];
 

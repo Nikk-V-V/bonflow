@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import { Text } from '@react-three/drei';
 import { RigidBody } from '@react-three/rapier';
-import { MaterialContext } from '@hooks/useMaterialsContext.js';
+import { MaterialContext } from '@/hooks/useMaterialsContext.js';
 
 const Cell = ({ position, scale, title }) => {
     const { boxGeometry, cellMaterial } = useContext(MaterialContext);

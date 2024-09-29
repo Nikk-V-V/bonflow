@@ -1,8 +1,9 @@
 import * as THREE from 'three';
-import { saveStateToLocalStorage } from '../helpers/serialize';
-import { calculatePlayerPosition } from '../helpers/players/playerPositions';
-import getPlayerProfession from '../helpers/players/getPlayerProfession';
-import PLAYERS_DATA from '../constants/PLAYERS_DATA';
+import { calculatePlayerPosition } from '@/helpers/players/playerPositions.js';
+import getPlayerProfession from '@/helpers/players/getPlayerProfession.js';
+import { saveStateToLocalStorage } from '@/helpers/serialize.js';
+import PLAYERS_DATA from '@/constants/PLAYERS_DATA.jsx';
+
 
 export default function (set, get) {
     return {

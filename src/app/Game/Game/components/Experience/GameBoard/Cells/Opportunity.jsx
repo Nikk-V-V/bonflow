@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import Cell from './Cell/Cell.jsx';
-import { MaterialContext } from '@hooks/useMaterialsContext.js';
+import { MaterialContext } from '@/hooks/useMaterialsContext.js';
 
 export default function Opportunity(props) {
     const { boxGeometry, cellMaterial } = useContext(MaterialContext);

@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@components/ui/Avatar.jsx';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar.jsx';
 
 export default function UserIcon({ path }) {
     return (

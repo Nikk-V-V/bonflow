@@ -1,7 +1,7 @@
 // Dices.jsx
 import { useEffect, useState } from 'react';
 import Dice from './Dice/Dice.jsx';
-import useGame from '@stores/useGame.jsx';
+import useGame from '@/stores/useGame.jsx';
 
 export default function Dices({ isRolling, isClicked, setIsClicked }) {
     const { getCurrentPlayer, move } = useGame();

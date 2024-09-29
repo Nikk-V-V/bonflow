@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@libs/utils.js';
+import { cn } from '@/lib/utils.js';
 
 export const Loader = ({ loading, children, className }) => {
     return loading ? (

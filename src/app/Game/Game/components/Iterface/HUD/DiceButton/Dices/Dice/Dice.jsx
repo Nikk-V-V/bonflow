@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { MaterialContext } from '@hooks/useMaterialsContext.js';
+import { MaterialContext } from '@/hooks/useMaterialsContext.js';
 
 export default function Dice({ setDicesResult, index, position, isRolling }) {
     const { boxGeometry, diceMaterial } = useContext(MaterialContext);

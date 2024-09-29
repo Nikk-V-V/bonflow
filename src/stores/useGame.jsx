@@ -1,14 +1,12 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
-import RatRaceCellsData from '../constants/RatRace/RatRaceCellsData.jsx';
-import FastTrackCellsData from '../constants/FastTrack/FastTrackCellsData.jsx';
-import generateCellPositions from '../helpers/players/generateCellPositions.js';
 import userActions from './userActions.jsx';
 import cardsActions from './cardsActions.jsx';
+import generateCellPositions from '@/helpers/players/generateCellPositions.js';
+import FastTrackCellsData from '@/constants/FastTrack/FastTrackCellsData.jsx';
+import RatRaceCellsData from '@/constants/RatRace/RatRaceCellsData.jsx';
 
 const cellsScale = 9;
-
-const models = ['/models/player/cat.glb', '/models/player/wolf.glb'];
 
 export default create(
     subscribeWithSelector((set, get) => ({

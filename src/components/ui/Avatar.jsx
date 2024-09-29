@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
-import { cn } from '@libs/utils.js';
+import { cn } from '@/lib/utils.js';
 
 const createAvatarComponent = (PrimitiveComponent, defaultClassName) => {
     const Component = React.forwardRef(({ className, ...props }, ref) => (
