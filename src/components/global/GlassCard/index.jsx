@@ -1,5 +1,5 @@
 import { Card } from '../../ui/Card.jsx';
-import { cn } from '../../../libs/utils.js';
+import { cn } from '@/lib/utils.js';
 
 export default function GlassCard({ children, className }) {
     return (

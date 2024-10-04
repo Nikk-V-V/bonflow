@@ -1,4 +1,4 @@
-import { cn } from '../../../libs/utils.js';
+import { cn } from '@/lib/utils.js';
 
 export default function BackdropGradient({ children, className, container }) {
     return (

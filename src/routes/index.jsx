@@ -1,25 +1,22 @@
-import { lazy, Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import { Loader } from '@/components/global/Loader';
-
-const GameLayout = lazy(() => import('../app/Game/layout.jsx'));
-const Game = lazy(() => import('../app/Game/Game/page.jsx'));
+import Game from '@/app/Game/page.jsx';
+import GameLayout from '@/app/Game/layout.jsx';
 
 export default createBrowserRouter([
     {
         path: '/',
         element: (
-            <Suspense fallback={<Loader />}>
-                <GameLayout />
-            </Suspense>
+            // <Suspense fallback={<Loader />}>
+            <GameLayout />
+            // </Suspense>
         ),
         children: [
             {
                 path: '/',
                 element: (
-                    <Suspense fallback={<Loader />}>
-                        <Game />
-                    </Suspense>
+                    // <Suspense fallback={<Loader />}>
+                    <Game />
+                    // </Suspense>
                 ),
             },
         ],

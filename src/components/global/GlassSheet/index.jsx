@@ -1,5 +1,6 @@
 import React from 'react';
-import { cn } from '../../../libs/utils.js';
+import { cn } from '@/lib/utils.js';
+import { SheetContent, SheetTrigger } from '@/components/ui/Sheet.jsx';
 
 export default function GlassSheet({
     children,

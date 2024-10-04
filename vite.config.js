@@ -14,14 +14,14 @@ export default defineConfig(({ mode }) => {
         },
         resolve: {
             alias: {
-                '@/': path.resolve(__dirname, 'src/'),
+                '@': path.resolve(__dirname, 'src/'),
                 '@/components': path.resolve(__dirname, 'src/components'),
                 '@/hooks': path.resolve(__dirname, 'src/hooks'),
                 '@/constants': path.resolve(__dirname, 'src/constants'),
                 '@/styles': path.resolve(__dirname, 'src/styles'),
                 '@/stores': path.resolve(__dirname, 'src/stores'),
                 '@/helpers': path.resolve(__dirname, 'src/helpers'),
-                '@/lib': path.resolve(__dirname, 'src/libs'),
+                '@/lib': path.resolve(__dirname, 'src/lib'),
             },
         },
         plugins: [
