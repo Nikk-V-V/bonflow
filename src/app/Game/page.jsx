@@ -1,4 +1,4 @@
-import Experience from './components/Experience/index.jsx';
+import Experience from './components/Experience';
 
 export default function Game() {
     return <Experience />;

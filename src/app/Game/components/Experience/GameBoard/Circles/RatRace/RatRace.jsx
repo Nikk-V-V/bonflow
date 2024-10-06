@@ -2,7 +2,8 @@ import Circle from '../Cirle/Circle.jsx';
 import useGame from '@/stores/useGame.jsx';
 
 export default function RatRace({}) {
-    const { cellsScale, ratRaceCells } = useGame(state => state);
+    const ratRaceCells = useGame(state => state.ratRaceCells);
+    const cellsScale = useGame(state => state.cellsScale);
 
     return (
         <Circle

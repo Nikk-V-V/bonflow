@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import Dices from './Dices/Dices.jsx';
-import Lights from '../../../Experience/GameBoard/Lights/Lights.jsx';
+import Lights from '../../../Experience/Lights/Lights.jsx';
 import { cn } from '@/lib/utils.js';
 
 export default function DiceButton() {

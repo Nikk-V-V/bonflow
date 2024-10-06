@@ -12,6 +12,7 @@ export default function Dices({ isRolling, isClicked, setIsClicked }) {
 
     const currentPlayer = getCurrentPlayer();
 
+    
     const { diceCount } = currentPlayer.currentTurn;
 
     useEffect(() => {

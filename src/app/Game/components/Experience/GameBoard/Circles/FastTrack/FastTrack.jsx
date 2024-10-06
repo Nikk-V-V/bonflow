@@ -2,7 +2,8 @@ import Circle from '../Cirle/Circle.jsx';
 import useGame from '@/stores/useGame.jsx';
 
 export default function FastTrack() {
-    const { cellsScale, fastTrackCells } = useGame(state => state);
+    const fastTrackCells = useGame(state => state.fastTrackCells);
+    const cellsScale = useGame(state => state.cellsScale);
 
     return (
         <>

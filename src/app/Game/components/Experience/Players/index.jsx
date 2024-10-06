@@ -1,9 +1,11 @@
-import Player from './Player.jsx';
-import useGame from '@/stores/useGame.jsx';
+import { shallow } from 'zustand/shallow';
 import useCameraController from '@/hooks/useCameraController.jsx';
+import useGame from '@/stores/useGame.jsx';
+import Player from './Player.jsx';
+
 
 export default function Players({}) {
-    const { players } = useGame(state => state);
+    const players = useGame(state => state.players, shallow);
 
     useCameraController();
 

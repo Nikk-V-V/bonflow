@@ -5,12 +5,9 @@ export default function Circle({
 }) {
     return (
         <group position={position}>
-            <mesh>
-                {cells &&
-                    cells.map(({ Cell, ...rest }, index) => {
-                        return <Cell scale={scale} key={index} {...rest} />;
-                    })}
-            </mesh>
+            {cells && cells.length > 0 && cells.map(({ Cell, ...rest }, index) => (
+                <Cell scale={scale} key={index} {...rest} />
+            ))}
         </group>
     );
 }

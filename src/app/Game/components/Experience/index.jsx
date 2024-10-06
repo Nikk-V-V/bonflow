@@ -1,13 +1,14 @@
 import { useEffect } from 'react';
-import GameBoard from './GameBoard/GameBoard.jsx';
-import Interface from '../Iterface/index.jsx';
+
 import useMaterialsContext, {
     MaterialContext,
 } from '@/hooks/useMaterialsContext.js';
-import useGame from '@/stores/useGame.jsx';
+import useGame from '@/stores/useGame';
+import GameBoard from './GameBoard/GameBoard.jsx';
+import Interface from '../Iterface/';
 
-const Index = () => {
-    const { initPlayers } = useGame();
+const Experience = () => {
+    const initPlayers = useGame((state) => state.initPlayers);
     const context = useMaterialsContext();
 
     useEffect(() => {
@@ -22,4 +23,4 @@ const Index = () => {
         </MaterialContext.Provider>
     );
 };
-export default Index;
+export default Experience;

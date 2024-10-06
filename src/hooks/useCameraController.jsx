@@ -21,12 +21,21 @@ const useCameraController = () => {
             );
 
             // Оновлений зсув камери
-            const offset = new THREE.Vector3(2, 2, 6);
+            const offset = new THREE.Vector3(-2, 5, 6);
             const cameraPosition = playerPosition.clone().add(offset);
 
+            // Плавне оновлення позиції камери
             camera.position.lerp(cameraPosition, 0.1);
-            camera.lookAt(playerPosition);
+
+            // Плавне обертання камери
+            const lookAtTarget = playerPosition;
+            const currentQuaternion = new THREE.Quaternion().copy(camera.quaternion);
+            camera.lookAt(lookAtTarget);
+            const targetQuaternion = new THREE.Quaternion().copy(camera.quaternion);
+            camera.quaternion.copy(currentQuaternion);
+            camera.quaternion.slerp(targetQuaternion, 0.1);
         }
     });
 };
+
 export default useCameraController;

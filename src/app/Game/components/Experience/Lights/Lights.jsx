@@ -1,5 +1,7 @@
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
+import { Environment } from '@react-three/drei';
+
 
 export default function Lights() {
     const light = useRef();

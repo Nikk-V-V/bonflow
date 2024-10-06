@@ -25,39 +25,33 @@ const cellMap = new Map([
 ]);
 
 export default function generateCellPositions(cellData, scale) {
-    const cellInPart = Math.floor(cellData.length / 4); // Округлюємо до цілого числа
+    const calculatePosition = (index, totalCells, scale) => {
+        const perimeter = Math.floor(totalCells / 4);
+        const part = Math.floor(index / perimeter);
+        const offset = index % perimeter;
+
+        switch (part) {
+            case 0:
+                return new THREE.Vector3(0, 0, offset * -scale); // First part: Movement along Z axis
+            case 1:
+                return new THREE.Vector3(-scale * offset, 0, -scale * perimeter); // Second part: Movement along X axis
+            case 2:
+                return new THREE.Vector3(-scale * perimeter, 0, -scale * perimeter + offset * scale); // Third part: Movement along Z axis in reverse direction
+            case 3:
+                return new THREE.Vector3(-scale * (perimeter - offset), 0, 0); // Fourth part: Movement along X axis in reverse order
+            default:
+                return new THREE.Vector3(0, 0, 0);
+        }
+    };
 
     return cellData.map((cell, index) => {
-        if (index < cellInPart) {
-            // Перша частина: Рух по осі Z
-            cell.position = new THREE.Vector3(0, 0, index * -scale);
-        } else if (index < cellInPart * 2) {
-            // Друга частина: Рух по осі X
-            cell.position = new THREE.Vector3(
-                -scale * (index - cellInPart),
-                0,
-                -scale * cellInPart
-            );
-        } else if (index < cellInPart * 3) {
-            // Третя частина: Рух по осі Z у зворотному напрямку
-            cell.position = new THREE.Vector3(
-                -scale * cellInPart,
-                0,
-                -scale * cellInPart + (index - cellInPart * 2) * scale
-            );
-        } else {
-            // Четверта частина: Рух по осі X у зворотному порядку
-            cell.position = new THREE.Vector3(
-                -scale * (cellInPart * 4 - index),
-                0,
-                0
-            );
-        }
+        const position = calculatePosition(index, cellData.length, scale);
 
         return {
             ...cell,
             scale,
             Cell: cellMap.get(cell.type),
+            position,
         };
     });
 }

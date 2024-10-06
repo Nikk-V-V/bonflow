@@ -1,9 +1,9 @@
 import { Canvas } from '@react-three/fiber';
 import { Physics } from '@react-three/rapier';
-import Lights from './Lights/Lights.jsx';
-import Players from './Players';
-import RatRace from './Circles/RatRace/RatRace.jsx';
-import FastTrack from './Circles/FastTrack/FastTrack.jsx';
+import { Stats as DreiStats } from '@react-three/drei';
+import EnhancedLights from '../EnhancedLights/';
+import Players from '../Players/';
+import Circles from './Circles/'
 
 export default function GameBoard() {
     return (
@@ -15,13 +15,12 @@ export default function GameBoard() {
                 far: 200,
             }}
         >
-            <color args={['#000000']} attach="background" />
+            <EnhancedLights/>
             <Physics gravity={[0, -9.81, 0]} debug={false}>
-                <Lights />
-                <RatRace />
-                <FastTrack />
                 <Players />
+                <Circles/>
             </Physics>
+            <DreiStats showPanel={0} className="fps-stats" />
         </Canvas>
     );
 }

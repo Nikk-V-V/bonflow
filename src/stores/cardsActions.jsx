@@ -57,12 +57,12 @@ export default function (set, get) {
                     { label: "Ok", onClick: closeModal }
                 ],
                 showBackdrop: true,
-                logo: "/images/icons/baby.png"
+                logo: "/images/icons/baby.webp"
             });
         },
         processDoodadCard: cell => {
             const { openModal, closeModal } = get();
-            const card = getRandomCard(RateRaceData.Da);
+            const card = getRandomCard(RateRaceData.Doodad);
 
             openModal({
                 title: "Витрати!",
@@ -105,7 +105,6 @@ export default function (set, get) {
         },
         processPaycheckCard: cell => {
             const { openModal, closeModal } = get();
-            console.log(cell);
 
             openModal({
                 title: "День зарплати",
